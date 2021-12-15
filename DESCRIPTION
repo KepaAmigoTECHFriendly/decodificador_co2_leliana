@@ -1,0 +1,16 @@
+Package: DecodificacionCO2
+Type: Package
+Title: DecodificacionCO2
+Version: 0.1.0
+Author: Kepa Amigo Cañibano
+Maintainer: Kepa Amigo Cañibano <kepa@techfriendly.es>
+Description: Decodifica los datos del sensor Watteco VAQAO. Como input, recibe la trama de datos en hexadecimal sin espacios
+License: GPL-2
+Encoding: UTF-8
+LazyData: FLASE
+Imports:
+  jsonlite,
+  rvest,
+  stringr,
+  dplyr
+RoxygenNote: 7.1.2
