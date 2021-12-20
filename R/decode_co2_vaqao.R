@@ -30,8 +30,12 @@ decode_co2_vaqao <- function(dato_hex){
   datos_sensor$data$value[datos_sensor$data$label_name == "H"] <- datos_sensor$data$value[datos_sensor$data$label_name == "H"]/100
   datos_sensor$data$value[datos_sensor$data$label_name == "T"] <- datos_sensor$data$value[datos_sensor$data$label_name == "T"]/100
 
-  json <- toJSON(datos_sensor)
-  json <- paste('{"lista_datos_sensor":[',json,']}',sep = "")
+  datos_sensor_datos <- datos_sensor$data
+  datos_sensor_datos$ts <- datos_sensor$ts
+
+  json <- toJSON(datos_sensor_datos)
+  json <- paste('{"lista_datos_sensor":',json,'}',sep = "")
+
 
   return(json)
 }
